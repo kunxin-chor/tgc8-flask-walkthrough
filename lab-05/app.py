@@ -18,7 +18,9 @@ def greet():
                            fname=first_name, lname=last_name)
 
 
-
+@app.route('/say_hello/<name>')
+def say_hello(name):
+    return render_template("say_hello.template.html", name=name)
 
 
 # "magic code" -- boilerplate
